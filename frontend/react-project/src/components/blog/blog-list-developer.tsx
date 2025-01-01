@@ -1,11 +1,30 @@
-import React, { useEffect, useState, ChangeEvent, FormEvent } from 'react';
-import { getPosts, createPost, deletePost, Post } from './get-blog';
-import { Card, CardContent, TextField, Button, Grid, Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { getPosts, deletePost, Post } from './get-blog';
+import { Card, CardContent, Button, Grid, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const BlogList: React.FC = () => {
+const BlogListDeveloper: React.FC = () => {
+/**
+ * コンポーネント名: BlogListDeveloper
+ *
+ * 概要:
+ * - 開発者向けのブログ管理コンポーネント。
+ * - 投稿リストを表示し、新規投稿の作成や既存投稿の削除が可能。
+ *
+ * 機能:
+ * - 投稿の取得 (`fetchPosts`)
+ * - 投稿の削除 (`handleDelete`)
+ * - 投稿詳細ページへのナビゲーション (`handleTitleClick`)
+ * - 新規投稿ページへのナビゲーション
+ *
+ * 使用例:
+ * <BlogListDeveloper />
+ *
+ * 備考:
+ * - Material-UIを使用してスタイリングしています。
+ * - `getPosts`と`deletePost`はAPIから投稿データを取得および削除する関数です。
+ */
   const [posts, setPosts] = useState<Post[]>([]);
-  const [newPost, setNewPost] = useState<Partial<Post>>({ title: '', content: '' });
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,22 +34,6 @@ const BlogList: React.FC = () => {
   const fetchPosts = async () => {
     const data = await getPosts();
     setPosts(data);
-  };
-
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setNewPost({
-      ...newPost,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (newPost.title && newPost.content) {
-      await createPost(newPost as Post);
-      fetchPosts();
-      setNewPost({ title: '', content: '' });
-    }
   };
 
   const handleDelete = async (id: number) => {
@@ -43,7 +46,7 @@ const BlogList: React.FC = () => {
   };
 
   return (
-    <div className="App" style={{ maxWidth: '950px', margin: '0 auto' }}>
+    <div style={{ maxWidth: '950px', margin: '0 auto' }}>
       <h1>My Blog & Todo List</h1>
       <div style={{ marginBottom: '2rem' }}>
         <h2>Blog Posts</h2>
@@ -86,4 +89,4 @@ const BlogList: React.FC = () => {
   );
 };
 
-export default BlogList;
+export default BlogListDeveloper;

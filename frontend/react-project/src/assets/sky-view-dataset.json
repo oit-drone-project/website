@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "categories": "spring",
+      "title": "春の風景",
+      "type": "image",
+      "src": "/images/spring.jpg"
+    },
+    {
+      "id": 2,
+      "categories": "summer",
+      "title": "夏の海",
+      "type": "image",
+      "src": "/images/summer.jpg"
+    },
+    {
+      "id": 3,
+      "categories": "sunset",
+      "title": "夕陽",
+      "type": "image",
+      "src": "/images/sunset.jpg"
+    },
+    {
+      "id": 4,
+      "categories": "nightview",
+      "title": "夜景",
+      "type": "video",
+      "src": "/videos/nightview.mp4"
+    },
+    {
+      "id": 5,
+      "categories": "spring",
+      "title": "春の風景",
+      "type": "image",
+      "src": "/images/spring.jpg"
+    },
+    {
+      "id": 6,
+      "categories": "summer",
+      "title": "夏の海",
+      "type": "image",
+      "src": "/images/summer.jpg"
+    },
+    {
+      "id": 7,
+      "categories": "sunset",
+      "title": "夕陽",
+      "type": "image",
+      "src": "/images/sunset.jpg"
+    },
+    {
+      "id": 8,
+      "categories": "nightview",
+      "title": "夜景",
+      "type": "video",
+      "src": "/videos/nightview.mp4"
+    }
+  ]

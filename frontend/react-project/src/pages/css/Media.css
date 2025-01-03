@@ -1,0 +1,186 @@
+  
+  .hero {
+    padding: 50px 20px;
+    background-image: url('https://via.placeholder.com/1500x500');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin: 0 0 20px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin: 0 0 30px;
+  }
+  
+  .hero button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .features {
+    margin-top: 40px;
+  }
+  
+  .feature-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .card {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: left;
+  }
+
+  .details-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .details-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .details-page p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .details-page button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .details-page button:hover {
+    background-color: #0056b3;
+  }
+  .controls {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .controls input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .filter-buttons button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .album {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-media {
+    width: 100%;
+    height: auto;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  
+  .pagination button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pagination button[disabled] {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  .sky-view-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 戻るボタンと検索バーを左右に配置 */
+    padding: 10px 20px;
+    background-color: #f8f8f8; /* ヘッダーの背景色 */
+    border-bottom: 1px solid #ddd; /* 下線で区切り */
+  }
+  
+  .back-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-label {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .search-input {
+    width: 300px; /* 入力欄の幅 */
+    padding: 10px; /* 枠内の余白 */
+    font-size: 16px; /* フォントサイズ */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }

@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 100px); /* フッターの高さを差し引く */
+  background: #fff;
+  overflow: hidden; /* スクロールを防止 */
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #6200ea;
+  color: white;
+  font-size: 1.5rem;
+  height: 10vh; /* ヘッダーを全体の高さの10%に設定 */
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7列 */
+  grid-template-rows: auto repeat(6, 1fr); /* 最初の行は自動、残り6行は均等 */
+  gap: 1px;
+  background-color: #ccc;
+  flex-grow: 1; /* 残りの高さを埋める */
+}
+
+.calendar-day-name {
+  background-color: #eceff1;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 0.9rem;
+  height: 5vh; /* 曜日の高さ */
+  min-height: 40px; /* 最小高さを指定 */
+}
+
+.calendar-day {
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  height: calc((85vh - 205px) / 6); /* ヘッダーと曜日を除く高さを6分割 */
+  min-height: 50px; /* 最小高さを確保 */
+}
+
+.calendar-day.empty {
+  background-color: #f9f9f9;
+  border: none;
+}
+
+.calendar-day:hover {
+  background-color: #e0e0e0;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.events {
+  margin-top: 10px;
+}
+
+.event {
+  background-color: #03a9f4;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
